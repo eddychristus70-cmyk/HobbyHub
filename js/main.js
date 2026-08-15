@@ -46,9 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
     navSearchToggle.addEventListener("click", (e) => {
       e.stopPropagation();
       const isOpen = navSearchWrap.classList.toggle("open");
-      navSearchToggle.classList.toggle("active", isOpen);
-      navSearchToggle.setAttribute("aria-expanded", isOpen);
-      if (isOpen) {
+      const isSearchVisible = navSearchForm.classList.toggle("active", isOpen);
+      navSearchToggle.classList.toggle("active", isSearchVisible);
+      navSearchToggle.setAttribute("aria-expanded", isSearchVisible);
+      if (isSearchVisible) {
         navSearchInput.focus();
       }
     });
@@ -57,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener("click", () => {
       if (navSearchInput.value.trim() === "") {
-        navSearchWrap.classList.remove("open");
+        navSearchForm.classList.remove("active");
         navSearchToggle.classList.remove("active");
         navSearchToggle.setAttribute("aria-expanded", "false");
       }
