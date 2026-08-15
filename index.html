@@ -13,16 +13,24 @@
     <nav class="nav-wrapper" aria-label="Main navigation">
       <a href="index.html" class="logo">Hobby<span>Hub</span></a>
 
-      <form class="nav-search" id="navSearchForm" role="search">
-        <input
-          type="search"
-          id="navSearchInput"
-          class="nav-search-input"
-          placeholder="Search listings..."
-          aria-label="Search listings">
-      </form>
-
       <div class="nav-actions">
+        <div class="nav-search-wrap" id="navSearchWrap">
+          <button class="nav-search-toggle" id="navSearchToggle" aria-label="Toggle search" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <form class="nav-search" id="navSearchForm" role="search">
+            <input
+              type="search"
+              id="navSearchInput"
+              class="nav-search-input"
+              placeholder="Search listings..."
+              aria-label="Search listings">
+          </form>
+        </div>
+
         <div class="nav-user" id="navUser">
           <button class="user-icon-btn" id="userIconBtn" aria-haspopup="true" aria-expanded="false" aria-label="Account menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -93,9 +101,39 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>HobbyHub &mdash; a student capstone project. <a href="about.html">Learn more</a></p>
-  </footer>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Hobby<span>Hub</span></a>
+      <p>HobbyHub is a community-driven project to swap and share hobbies locally. Connect with your neighbors and trade up your skills and gear!</p>
+    </div>
+    <div class="footer-col">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="browse.html">Browse Listings</a></li>
+        <li><a href="submit.html">Submit a Listing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="mailto:contact@hobbyhub.local">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Social</h3>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Twitter">t</a>
+        <a href="#" aria-label="Instagram">i</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 HobbyHub. All rights reserved.</p>
+  </div>
+</footer>
 
   <script src="js/listings-data.js"></script>
   <script src="js/main.js"></script>
