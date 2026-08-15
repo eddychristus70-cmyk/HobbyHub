@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HobbyHub — Local Hobby Swap &amp; Share</title>
+  <meta name="description" content="Find and share hobby items and skills with your local community — plants, games, books, crafts, music, and sports gear.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-wrapper" aria-label="Main navigation">
+      <a href="index.html" class="logo">Hobby<span>Hub</span></a>
+
+      <form class="nav-search" id="navSearchForm" role="search">
+        <input
+          type="search"
+          id="navSearchInput"
+          class="nav-search-input"
+          placeholder="Search listings..."
+          aria-label="Search listings">
+      </form>
+
+      <div class="nav-actions">
+        <div class="nav-user" id="navUser">
+          <button class="user-icon-btn" id="userIconBtn" aria-haspopup="true" aria-expanded="false" aria-label="Account menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+          <div class="user-dropdown" id="userDropdown">
+            <a href="#" class="dropdown-item">Log In</a>
+            <a href="#" class="dropdown-item">Sign Up</a>
+          </div>
+        </div>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="submit.html">Submit a Listing</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="heroSlider">
+      <div class="hero-slides">
+        <div class="hero-slide active" style="background-image:url('assets/images/hero/hero-plants.png')"></div>
+        <div class="hero-slide" style="background-image:url('assets/images/hero/hero-games.png')"></div>
+        <div class="hero-slide" style="background-image:url('assets/images/hero/hero-books.png')"></div>
+        <div class="hero-slide" style="background-image:url('assets/images/hero/hero-crafts.png')"></div>
+        <div class="hero-slide" style="background-image:url('assets/images/hero/hero-music.png')"></div>
+        <div class="hero-slide" style="background-image:url('assets/images/hero/hero-sports.png')"></div>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-inner">
+        <h1>Swap, share, and discover <span>hobbies</span> nearby</h1>
+        <p>HobbyHub connects students and young adults who want to trade plants, games, books, crafts, instruments, and sports gear — right in their own community.</p>
+        <a href="browse.html" class="btn btn-primary">Browse Listings</a>
+      </div>
+
+      <div class="hero-dots" id="heroDots" role="group" aria-label="Hero image slides">
+        <button class="hero-dot active" data-slide="0" aria-label="Show plants slide"></button>
+        <button class="hero-dot" data-slide="1" aria-label="Show board games slide"></button>
+        <button class="hero-dot" data-slide="2" aria-label="Show books slide"></button>
+        <button class="hero-dot" data-slide="3" aria-label="Show crafts slide"></button>
+        <button class="hero-dot" data-slide="4" aria-label="Show music slide"></button>
+        <button class="hero-dot" data-slide="5" aria-label="Show sports slide"></button>
+      </div>
+    </section>
+
+    <nav class="category-pills" aria-label="Browse by category">
+      <a href="browse.html?category=plants" class="pill">🌱 Plants</a>
+      <a href="browse.html?category=games" class="pill">🎲 Board Games</a>
+      <a href="browse.html?category=books" class="pill">📚 Books</a>
+      <a href="browse.html?category=crafts" class="pill">🧶 Crafts</a>
+      <a href="browse.html?category=music" class="pill">🎸 Music</a>
+      <a href="browse.html?category=sports" class="pill">⚽ Sports Gear</a>
+    </nav>
+
+    <section class="container">
+      <h2 class="section-title">Featured Listings</h2>
+      <div class="listings-grid" id="featuredGrid">
+        <!-- Populated dynamically by js/listings-data.js + js/main.js -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>HobbyHub &mdash; a student capstone project. <a href="about.html">Learn more</a></p>
+  </footer>
+
+  <script src="js/listings-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

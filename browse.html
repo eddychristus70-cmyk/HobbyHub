@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Listings — HobbyHub</title>
+  <meta name="description" content="Browse and filter local hobby swap listings by category, search term, and sort order.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-wrapper" aria-label="Main navigation">
+      <a href="index.html" class="logo">Hobby<span>Hub</span></a>
+
+      <form class="nav-search" id="navSearchForm" role="search">
+        <input
+          type="search"
+          id="navSearchInput"
+          class="nav-search-input"
+          placeholder="Search listings..."
+          aria-label="Search listings">
+      </form>
+
+      <div class="nav-actions">
+        <div class="nav-user" id="navUser">
+          <button class="user-icon-btn" id="userIconBtn" aria-haspopup="true" aria-expanded="false" aria-label="Account menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+          <div class="user-dropdown" id="userDropdown">
+            <a href="#" class="dropdown-item">Log In</a>
+            <a href="#" class="dropdown-item">Sign Up</a>
+          </div>
+        </div>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="browse.html" aria-current="page">Browse</a></li>
+        <li><a href="submit.html">Submit a Listing</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" style="background-image:url('assets/images/hero/hero-browse.png');">
+      <div class="page-hero-inner">
+        <h1 style="margin-bottom:0;">Browse Listings</h1>
+        <p>Find plants, games, books, crafts, instruments, and gear shared by people nearby.</p>
+      </div>
+    </section>
+
+    <div class="container">
+    <div class="browse-controls">
+      <div class="search-sort-row">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search listings by title or description..."
+          aria-label="Search listings">
+        <select id="sortSelect" class="sort-select" aria-label="Sort listings">
+          <option value="newest">Newest first</option>
+          <option value="oldest">Oldest first</option>
+          <option value="az">Title: A–Z</option>
+          <option value="za">Title: Z–A</option>
+        </select>
+      </div>
+
+      <nav class="category-pills" id="categoryPills" aria-label="Filter by category" style="padding-left:0; padding-right:0;">
+        <button class="pill active" data-category="all">All</button>
+        <button class="pill" data-category="plants">🌱 Plants</button>
+        <button class="pill" data-category="games">🎲 Board Games</button>
+        <button class="pill" data-category="books">📚 Books</button>
+        <button class="pill" data-category="crafts">🧶 Crafts</button>
+        <button class="pill" data-category="music">🎸 Music</button>
+        <button class="pill" data-category="sports">⚽ Sports Gear</button>
+      </nav>
+    </div>
+
+    <p class="results-count" id="resultsCount"></p>
+
+    <section>
+      <div class="listings-grid" id="listingsGrid">
+        <!-- Populated dynamically by js/listings-data.js + js/browse.js -->
+      </div>
+      <p class="empty-state" id="emptyState" style="display:none;">No listings match your search. Try a different keyword or category.</p>
+    </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>HobbyHub &mdash; a student capstone project. <a href="about.html">Learn more</a></p>
+  </footer>
+
+  <script src="js/listings-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/browse.js"></script>
+</body>
+</html>

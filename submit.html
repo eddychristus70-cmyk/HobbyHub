@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit a Listing — HobbyHub</title>
+  <meta name="description" content="Post a new hobby item, skill, or event to share with the HobbyHub community.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-wrapper" aria-label="Main navigation">
+      <a href="index.html" class="logo">Hobby<span>Hub</span></a>
+
+      <form class="nav-search" id="navSearchForm" role="search">
+        <input
+          type="search"
+          id="navSearchInput"
+          class="nav-search-input"
+          placeholder="Search listings..."
+          aria-label="Search listings">
+      </form>
+
+      <div class="nav-actions">
+        <div class="nav-user" id="navUser">
+          <button class="user-icon-btn" id="userIconBtn" aria-haspopup="true" aria-expanded="false" aria-label="Account menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+          <div class="user-dropdown" id="userDropdown">
+            <a href="#" class="dropdown-item">Log In</a>
+            <a href="#" class="dropdown-item">Sign Up</a>
+          </div>
+        </div>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="submit.html" aria-current="page">Submit a Listing</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" style="background-image:url('assets/images/hero/hero-submit.png');">
+      <div class="page-hero-inner">
+        <h1 style="margin-bottom:0;">Submit a Listing</h1>
+        <p>Got something to swap or share? Fill out the form below.</p>
+      </div>
+    </section>
+
+    <div class="container">
+    <p style="color:var(--color-text-light); margin: 24px 0; max-width:640px;">
+      Your listing will appear instantly on the Browse page.
+    </p>
+
+    <form class="listing-form" id="listingForm" novalidate>
+      <div class="form-group">
+        <label for="title">Listing title</label>
+        <input type="text" id="title" name="title" placeholder="e.g. Pothos cutting, ready to root" required minlength="3">
+      </div>
+
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
+          <option value="" disabled selected>Select a category</option>
+          <option value="plants">🌱 Plants</option>
+          <option value="games">🎲 Board Games</option>
+          <option value="books">📚 Books</option>
+          <option value="crafts">🧶 Crafts</option>
+          <option value="music">🎸 Music</option>
+          <option value="sports">⚽ Sports Gear</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" placeholder="Describe the item or skill, and what (if anything) you'd like in return." required minlength="10"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="imageUrl">Image URL (optional)</label>
+        <input type="text" id="imageUrl" name="imageUrl" placeholder="Paste a link to a photo, or leave blank">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Contact email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dateAvailable">Available from</label>
+        <input type="date" id="dateAvailable" name="dateAvailable" required>
+      </div>
+
+      <div class="form-group">
+        <label>Condition</label>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="condition" value="new" required> New</label>
+          <label class="radio-option"><input type="radio" name="condition" value="used"> Used</label>
+          <label class="radio-option"><input type="radio" name="condition" value="well-loved"> Well-loved</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-secondary">Post Listing</button>
+      <p class="form-msg" id="formMsg" role="status"></p>
+    </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>HobbyHub &mdash; a student capstone project. <a href="about.html">Learn more</a></p>
+  </footer>
+
+  <script src="js/listings-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/submit.js"></script>
+</body>
+</html>

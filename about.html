@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — HobbyHub</title>
+  <meta name="description" content="Learn about HobbyHub's mission to connect local hobbyists through swapping and sharing.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-wrapper" aria-label="Main navigation">
+      <a href="index.html" class="logo">Hobby<span>Hub</span></a>
+
+      <form class="nav-search" id="navSearchForm" role="search">
+        <input
+          type="search"
+          id="navSearchInput"
+          class="nav-search-input"
+          placeholder="Search listings..."
+          aria-label="Search listings">
+      </form>
+
+      <div class="nav-actions">
+        <div class="nav-user" id="navUser">
+          <button class="user-icon-btn" id="userIconBtn" aria-haspopup="true" aria-expanded="false" aria-label="Account menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+          <div class="user-dropdown" id="userDropdown">
+            <a href="#" class="dropdown-item">Log In</a>
+            <a href="#" class="dropdown-item">Sign Up</a>
+          </div>
+        </div>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="submit.html">Submit a Listing</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" style="background-image:url('assets/images/hero/hero-about.png');">
+      <div class="page-hero-inner">
+        <h1 style="margin-bottom:0;">About HobbyHub</h1>
+        <p>A student capstone project connecting local hobbyists.</p>
+      </div>
+    </section>
+    <div class="container">
+    <article style="max-width:640px; margin:0 auto; padding:24px 0 48px;">
+      <section style="margin-bottom:28px;">
+        <h2 style="font-size:1.15rem; margin-bottom:8px;">The Problem</h2>
+        <p style="color:var(--color-text-light);">
+          Students and young adults often pick up hobbies — then outgrow them, run out of space,
+          or want to try something new — while paying full price for items that could just as
+          easily be swapped locally. HobbyHub makes it easy to find someone nearby who has what
+          you want, or wants what you have.
+        </p>
+      </section>
+
+      <section style="margin-bottom:28px;">
+        <h2 style="font-size:1.15rem; margin-bottom:8px;">Who It's For</h2>
+        <p style="color:var(--color-text-light);">
+          HobbyHub is built for students and young adults in a local community — anyone with a
+          hobby, a bit of gear, or a skill worth sharing, and a tight budget that makes swapping
+          more appealing than buying new.
+        </p>
+      </section>
+
+      <section>
+        <h2 style="font-size:1.15rem; margin-bottom:8px;">Categories</h2>
+        <p style="color:var(--color-text-light);">
+          🌱 Plants &nbsp;·&nbsp; 🎲 Board Games &nbsp;·&nbsp; 📚 Books &nbsp;·&nbsp;
+          🧶 Crafts &nbsp;·&nbsp; 🎸 Music/Instruments &nbsp;·&nbsp; ⚽ Sports Gear
+        </p>
+      </section>
+    </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>HobbyHub &mdash; a student capstone project. <a href="about.html">Learn more</a></p>
+  </footer>
+
+  <script src="js/listings-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
